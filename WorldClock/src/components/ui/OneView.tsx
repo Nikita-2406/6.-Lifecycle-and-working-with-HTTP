@@ -31,8 +31,9 @@ export const OneView = ({index, infoClock, elem, setInfoClock}: IOneViewProps) =
     } // WillUnMount
   }, []) // WillMount
 
+  const hours = date.getHours() + elem.deviation < 0 ? 24 + (date.getHours() + elem.deviation) : date.getHours() + elem.deviation
 
-  const timeNow = `${date.getHours() + elem.deviation}:${date.getMinutes()}:${date.getSeconds()}`
+  const timeNow = `${hours % 24}:${date.getMinutes()}:${date.getSeconds()}`
   
   const onClickButton = () => {
     infoClock?.splice(infoClock?.indexOf(elem), 1)

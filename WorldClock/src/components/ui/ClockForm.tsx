@@ -6,7 +6,7 @@ interface IClockFormProps {
 }
 
 export const ClockForm = ({setInfoClock}: IClockFormProps) => {
-  let [inputInfo, setInputInfo] = useState({
+  const [inputInfo, setInputInfo] = useState({
     name: "", 
     deviation: 0
   })
@@ -33,7 +33,7 @@ export const ClockForm = ({setInfoClock}: IClockFormProps) => {
   return (
     <form onSubmit={handlerSubmit}>
       <input type="text" name="name" onChange={handlerChange}/>
-      <input type="number" name="deviation" onChange={handlerChange} value={inputInfo.deviation}/>
+      <input type="number" name="deviation" onChange={handlerChange} value={inputInfo.deviation} min={-24} max={24}/>
       <button>Add</button>
     </form>
   )

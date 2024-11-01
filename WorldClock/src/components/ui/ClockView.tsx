@@ -10,7 +10,7 @@ interface IClockViewPeops {
 export const ClockView = ({infoClock, setInfoClock}: IClockViewPeops) => {
   // const date = new Date()
   let index = 0;
-  return (<>
+  return (<div>
   {infoClock?.map(elem => {
     index++
     return <OneView
@@ -20,5 +20,5 @@ export const ClockView = ({infoClock, setInfoClock}: IClockViewPeops) => {
         setInfoClock={setInfoClock}/>
   })
   }
-  </>)
+  </div>)
 }
