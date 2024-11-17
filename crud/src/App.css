@@ -1,0 +1,31 @@
+.note {
+  display: inline-block;
+  width: 300px;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+p {
+  word-break: break-all
+}
+
+.body--view--notes {
+  width: 700px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.button--delete {
+  padding: 7px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.add--button {
+  padding: 10px 50px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
